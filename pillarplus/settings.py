@@ -16,7 +16,6 @@ import os
 import environ
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 env = environ.Env(
     JWT_SECRET =(str,'.ZOPW9{c~T4M?Btn_nf4h\]CYs@"6*=WQw5}OxV\}'),
     SERVER_URL =(str,'http://127.0.0.1:8000'),
@@ -94,7 +93,7 @@ WSGI_APPLICATION = 'pillarplus.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASE_NAME = '*******************'
+DATABASE_NAME = '************************'
 DATABASE_HOST = 'localhost'
 PORT = '27017'
 
@@ -212,5 +211,7 @@ TOKEN_TIMELINE = env('TOKEN_TIMELINE')
 REFRESH_TOKEN_TIMELINE = env('REFRESH_TOKEN_TIMELINE')
 SERVER_URL = env('SERVER_URL')
 
+if not os.path.isdir(f'{BASE_DIR}\media'):
+    os.mkdir(f'{BASE_DIR}\media')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
