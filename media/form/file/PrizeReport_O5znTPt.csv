@@ -1,6 +1,0 @@
-field_name,type,options,mandatory
-Name,text,,TRUE
-Age,number,,FALSE
-Gender,singleSelect,Male Female,TRUE
-Date OF Birth,date,,FALSE
-Date OF Birth,date,,FALSE
